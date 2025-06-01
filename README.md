@@ -21,28 +21,30 @@
 
 **Conclusion:** The developed pipeline demonstrated sensitivity to the signal enhancements of the lung tissue and oxygenated blood at 3 T. The difference in lung PSE between current smokers and non-smokers indicates a likely sensitivity to lung function alterations that may be seen in mild pathology, supporting future use of our methods in patient studies.
 
-## Citation
-[**Independent component analysis (ICA) applied to dynamic oxygen-enhanced MRI (OE-MRI) for robust functional lung imaging at 3 T**](https://www.biorxiv.org/content/10.1101/2023.07.05.547787v1)
+## Publication
+[**Independent component analysis (ICA) applied to dynamic oxygen-enhanced MRI (OE-MRI) for robust functional lung imaging at 3 T**](https://onlinelibrary.wiley.com/doi/10.1002/mrm.29912)
 
 Sarah H. Needleman, Mina Kim, Jamie R. McClelland, Josephine H. Naish, Marta Tibiletti, James P. B. O’Connor, Geoff J. M. Parker
 
-bioRxiv 2023.07.05.547787; doi: https://doi.org/10.1101/2023.07.05.547787
+Citation: Needleman SH, Kim M, McClelland JR, et al. Independent component analysis (ICA) applied to dynamic oxygen-enhanced MRI (OE-MRI) for robust functional lung imaging at 3 T. Magn Reson Med. 2024; 91: 955-971. doi: 10.1002/mrm.29912
 
 Bibtex entry:
 ```
-@article {Needleman2023.07.05.547787,
-author = {Sarah H. Needleman and Mina Kim and Jamie R. McClelland and Josephine H. Naish and Marta Tibiletti and James P. B. O{\textquoteright}Connor and Geoff J. M. Parker},
-title = {Independent component analysis (ICA) applied to dynamic oxygen-enhanced MRI (OE-MRI) for robust functional lung imaging at 3 T},
-elocation-id = {2023.07.05.547787},
-year = {2023},
-doi = {10.1101/2023.07.05.547787},
-publisher = {Cold Spring Harbor Laboratory},
-URL = {https://www.biorxiv.org/content/early/2023/07/07/2023.07.05.547787},
-eprint = {https://www.biorxiv.org/content/early/2023/07/07/2023.07.05.547787.full.pdf},
-journal = {bioRxiv}
+@article{https://doi.org/10.1002/mrm.29912,
+author = {Needleman, Sarah H. and Kim, Mina and McClelland, Jamie R. and Naish, Josephine H. and Tibiletti, Marta and O'Connor, James P. B. and Parker, Geoff J. M.},
+title = {Independent component analysis (ICA) applied to dynamic oxygen-enhanced MRI (OE-MRI) for robust functional lung imaging at 3 T},
+journal = {Magnetic Resonance in Medicine},
+volume = {91},
+number = {3},
+pages = {955-971},
+keywords = {dynamic, lung function, oxygenation, oxygen-enhanced MRI, repeatability, susceptibility contrast},
+doi = {https://doi.org/10.1002/mrm.29912},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.29912},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/mrm.29912},
+year = {2024}
 }
 ```
-The figures on this page were adapted from the above [publication](#citation).
+The figures on this page were adapted from the above publication.
 
 ## Image registration algorithm and implementation of ICA
 Registration (motion-correction) of the dynamic images was performed using the deformable image registration software [NiftyReg](http://cmictig.cs.ucl.ac.uk/wiki/index.php/NiftyReg) (version 1.5.71) [^1]. The following parameters were used in NiftyReg:
@@ -50,7 +52,7 @@ Registration (motion-correction) of the dynamic images was performed using the d
 -be 0.005 --lncc -5 -sx -3 -sy -3 -vel
 ```
 Within the pipeline, temporal ICA is applied using [scikit-learn FastICA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html) (version 1.2.2) [^2][^3].
-For further details, please see the above [publication](#citation).
+For further details, please see the above publication.
 
 
 
